@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Observable - Bivariate</title>
+    <link rel="stylesheet" type="text/css" href="observable.css">
+  </head>
+  <body>
+    <script type="module">
+      // Observable runtime and inspector.
+      import {Runtime, Inspector} from "https://unpkg.com/@observablehq/notebook-runtime?module";
+
+      // notebook, compiled as an ES module.
+      import notebook from "https://api.observablehq.com/d/7421d68c1d1b82e1.js";
+      // could also be local
+      // import notebook from "./my-neat-notebook.js";
+
+      // select cell
+      Runtime.load(notebook, (cell) => {
+        if (cell.name === "chart") {
+          const element = document.body.appendChild(document.createElement("div"));
+          return new Inspector(element);
+        }
+      });
+    </script>
+  </body>
+</html>

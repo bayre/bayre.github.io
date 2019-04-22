@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Observable - Difference chart</title>
+    <link rel="stylesheet" type="text/css" href="observable.css">
+  </head>
+  <body>
+    <script type="module">
+      // Observable runtime and inspector.
+      import {Runtime, Inspector} from "https://unpkg.com/@observablehq/notebook-runtime?module";
+
+      // notebook, compiled as an ES module.
+      import notebook from "https://api.observablehq.com/d/e788f82fd5873fbd.js";
+      // could also be local
+      // import notebook from "./my-neat-notebook.js";
+
+      // select cell
+      Runtime.load(notebook, (cell) => {
+        if (cell.name === "chart") {
+          const element = document.body.appendChild(document.createElement("div"));
+          return new Inspector(element);
+        }
+      });
+    </script>
+  </body>
+</html>
