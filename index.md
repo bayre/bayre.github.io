@@ -1,3 +1,3 @@
 # bayre.github.io
 
-[GLP slides](https://bayre.github.io/docs/zdc/zdc.html)
+[GLP slides](https://bayre.github.io/docs/slides/zdc/zdc.html)
