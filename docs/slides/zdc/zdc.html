@@ -96,30 +96,19 @@ class: inverse, center, middle
 
 ### Trase - a scalable monitoring solution
 
-.pull-left[
-
-- Per-shipment trade records
-
-- Asset registries
-
-- Company ownership
-
-- Sanitary inspections
-
-- Production statistics
-
-- Commodity-linked deforestation risk
-
-] 
- 
-.schematic-right[
+.schematic[
  ![Schematic](images/schematic.svg)
 ]
 
 ???
 
 - Open data solution
-- Based on per-shipment trade records; asset registries; production statistics and deforestation analysis
+- Per-shipment trade records
+- Asset registries
+- Company ownership
+- Sanitary inspections
+- Production statistics
+- Commodity-linked deforestation risk
 
 ---
 class: inverse, center, middle
@@ -136,36 +125,34 @@ class: inverse, center, middle
 
 ???
 
-- Deforestation peaked in 2004 / 2005. Greenpeace, Soy Moratorium, and the chickens driving the speed boat
-- Commitment came into place with an original baseline of 2006 pushed back to 2008 and soy deforestation dipped significantly
-- The moratorium is thought by many to be a success, but it does not address the most pressing areas of deforestation
+- Deforestation peaked in 2004 / 2005. Greenpeace, Soy Moratorium
+- Soy Moratorium came into place with an original baseline of 2006 pushed back to 2008 and soy deforestation dipped significantly
+- Rise of unilateral commitments since the NYDF - Cargill, Bunge, ADM
 
----
+&lt;!-- --- --&gt;
 
-### Coverage, but not where it's needed most
+&lt;!-- ### Coverage, but not where it's needed most --&gt;
 
-&lt;div class="iframe-container-bars"&gt;
-    &lt;iframe src="figures/observable/grouped_bars_v2.html" id="grouped_bars" scrolling="no" seamless="seamless"&gt; &lt;/iframe&gt;
-&lt;/div&gt;
+&lt;!-- &lt;div class="iframe-container-bars"&gt; --&gt;
+&lt;!--     &lt;iframe src="figures/observable/grouped_bars_v2.html" id="grouped_bars" scrolling="no" seamless="seamless"&gt; &lt;/iframe&gt; --&gt;
+&lt;!-- &lt;/div&gt; --&gt;
 
 ---
 
 .pull-left[
 ### Varied coverage at the municipal scale
-
-- Coverage in Matopiba varies widely
-
-  - Highest in those regions where major traders have made historical investments (storage and crushing facilities)
-  
-  - Lowest in Tocantins and Maranhão where newer traders predominate
-  
-- Pockets of low coverage in northern Mato Grosso 
-
 ]
 
 &lt;div class="iframe-container-map"&gt;
     &lt;iframe src="figures/observable/bivariate_map_v2.html" id="bivariate" scrolling="no" seamless="seamless"&gt; &lt;/iframe&gt;
 &lt;/div&gt;
+
+???
+
+- Coverage in Matopiba varies widely
+  - Highest in those regions where major traders have made historical investments (storage and crushing facilities)
+  - Lowest in Tocantins and Maranhão where newer traders predominate
+- Pockets of low coverage in northern Mato Grosso 
 
 ---
 
@@ -175,23 +162,50 @@ class: inverse, center, middle
     &lt;iframe src="figures/observable/committed_vs_non.html" id="committed_vs_non" scrolling="no" seamless="seamless"&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 
----
+&lt;!-- --- --&gt;
 
-### Deforestation trajectories vs implementation dates
+&lt;!-- ### Deforestation trajectories vs implementation dates --&gt;
 
-&lt;img src="zdc_files/figure-html/plot 4.1-1.png" width="1008" style="display: block; margin: auto;" /&gt;
+&lt;!-- ```{r plot 4.1, echo = FALSE, message=FALSE, warning=FALSE, fig.retina=2, fig.height=6, fig.width=14, fig.align='center'} --&gt;
+&lt;!-- # absolute --&gt;
+&lt;!-- plot4 %&gt;% --&gt;
+&lt;!--   ggplot() + --&gt;
+&lt;!--   geom_line(aes(x = YEAR, y = DEF_ABS)) + --&gt;
+&lt;!--   geom_vline(aes(xintercept = YEAR_ZDC), size = 1, linetype = "dashed", colour = "#9400D3") + --&gt;
+&lt;!--   facet_wrap( ~ EXPORTER) + --&gt;
+&lt;!--   labs(x = "Year", --&gt;
+&lt;!--        y = "Soy deforestation risk (ha / 1000 tons)") + --&gt;
+&lt;!--   theme_minimal() + --&gt;
+&lt;!--   theme(panel.grid.minor.y = element_blank(), --&gt;
+&lt;!--         panel.grid.major.x = element_blank(), --&gt;
+&lt;!--         plot.background = element_rect(fill = "#F6F6F6", size = 0), --&gt;
+&lt;!--         text = element_text(family = "Fira Mono", --&gt;
+&lt;!--                             size = 14)) --&gt;
+&lt;!-- ``` --&gt;
 
-???
+&lt;!-- ??? --&gt;
 
-- Cargill is focussed on illegal deforestation rather than zero deforestation.
-- ADM the most transparent on implementation - but their initiatives are fluffy.
-- Bunge set out three-phase effort to increase traceability and claim that 90% of their direct sourcing in high risk regions (i.e. Matopiba) is traceable to the farm. They say nothing about third-party suppliers. They report that in 2017/18, 98 monitored farms were flagged for deforestation within their boundaries. Nine farms were suspended as of October 2018 based on their failure to engage further with Bunge. Despite this, their deforestation risk has remained about the market average.
+&lt;!-- - Cargill has until recently been more focussed on legality (Cerrado legal reserve limit is 20%, 35% in the legal Amazon). Now (2019) made more detailed commitment with clear aim to eliminate clearance of native vegetation. --&gt;
+&lt;!-- - ADM the most transparent on implementation - but their initiatives to reduce deforestation are unclear. --&gt;
+&lt;!-- - Bunge 3 phase effort on traceability (90% direct in high risk regions - Matopiba). Nothing on 3rd parties. 2017/18 98 farms monitred, 9 suspended Oct 2018 --&gt;
+&lt;!-- - Amaggi 2017 --&gt;
+&lt;!-- - LD late 2018, inclusive definition, no clear mechanisms --&gt;
+&lt;!-- - COFCO president made call for extension of Soy Moratorium to the Cerrado at the WEF in January --&gt;
 
 ---
 
 ### Deforestation trajectories vs implementation dates
 
 &lt;img src="zdc_files/figure-html/plot 4.2-1.png" width="1008" style="display: block; margin: auto;" /&gt;
+
+???
+
+- Cargill has until recently been more focussed on legality (Cerrado legal reserve limit is 20%, 35% in the legal Amazon). Now (2019) made more detailed commitment with clear aim to eliminate clearance of native vegetation.
+- ADM the most transparent on implementation - but their initiatives to reduce deforestation are unclear.
+- Bunge 3 phase effort on traceability (90% direct in high risk regions - Matopiba). Nothing on 3rd parties. 2017/18 98 farms monitred, 9 suspended Oct 2018
+- Amaggi 2017
+- LD late 2018, inclusive definition, no clear mechanisms
+- COFCO president made call for extension of Soy Moratorium to the Cerrado at the WEF in January
 
 ---
 
@@ -201,9 +215,7 @@ class: inverse, center, middle
 
 - Deadlines for eliminating deforestation
 
-  - Cargill (2030)
-  
-  - Bunge (between 2020 and 2025)
+- Clarity around forest definitions
 
 - Transparent mechanisms for enforcement
 
@@ -217,13 +229,17 @@ class: inverse, center, middle
 
 ???
 
-or, prospects for deforestation-free soy
- 
-- Deadlines for eliminating deforestation 
-- Transparent mechanisms for enforcing their commitments
-- Leakage between actors - ALZ
-- Leakage markets - China
-- Leakage between commodities
+- Deadlines 
+  - Cargill 2020 2030
+  - Bunge between 2020 and 2025
+  - ADM, Amaggi, Louis Dreyfus none
+- Only Cargill (2019) and Louis Dreyfus have explicitly included native vegetation. Others choose not to define forest
+- Traceability
+  - Cargill assesses farms for FC compliance (12k)
+  - Bunge 90% traceability. No 3rd party monitoring
+  - ADM boundaries of 100% farmers in priority municipalities. Agrotools
+  - Amaggi reports that it knows, but does not publish
+  - LD, despite inclusive forest definition, does not provide details. Compliant with CAR
 
 ---
 
@@ -240,6 +256,14 @@ or, prospects for deforestation-free soy
 ### Thank you!
 
 **Co-authors:** Erasmus Zu Ermgassen, Simone Bauch, Toby Gardner, Rachael Garrett, Javier Godar, Jonathan Green, Michael Lathuillière, Mairon G. Bastos Lima, Pernilla Löfgren, Christina MacFarquhar, Patrick Meyfroidt, Clément Suavet, Chris West
+
+
+
+
+
+
+
+![Footer](images/footer.png)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

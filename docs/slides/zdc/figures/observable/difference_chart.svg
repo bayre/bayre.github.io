@@ -1,13 +1,5 @@
+<?xml-stylesheet type="text/css" href="observable.css" ?>
 <svg viewBox="0,0,975,432" width="975" height="432" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style>
-
-  @import url(https://fonts.googleapis.com/css?family=Fira+Mono);
-
-  * {
-    font-family: Fira Mono !important;
-    font-size: 14px !important;
-  }
-  </style>
   <g transform="translate(0,402)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
     <g class="tick" opacity="1" transform="translate(40.5,0)"><line stroke="currentColor" y2="6"/>
       <text fill="currentColor" y="9" dy="0.71em">2006</text>
