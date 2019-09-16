@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- <style>
+  @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+  * {
+    font-family: Merriweather !important;
+  }
+</style> -->
+<body>
+  <div id="header"></div>
+  <div id="main"></div>
+</body>
+<script type="module">
+
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import notebook from "https://api.observablehq.com/d/49300fcd24e3a81e.js?v=3";
+
+const renders = {
+  "header": "#header",
+  "canvas": "#main"
+};
+
+function render(_node, value) {
+  if (!(value instanceof Element)) {
+    const el = document.createElement("span");
+    el.innerHTML = value;
+    value = el;
+  }
+  if (_node.firstChild !== value) {
+    if (_node.firstChild) {
+      while (_node.lastChild !== _node.firstChild) _node.removeChild(_node.lastChild);
+      _node.replaceChild(value, _node.firstChild);
+    } else {
+      _node.appendChild(value);
+    }
+  }
+}
+const runtime = new Runtime();
+const main = runtime.module(notebook, name => {
+  const selector = renders[name];
+  if (selector) {
+    return {
+      fulfilled: (value) => render(document.querySelector(selector), value)
+    }
+  } else {
+    return true;
+  }
+});
+
+</script>
